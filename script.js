@@ -13,7 +13,7 @@ if (Number(age) < 18) {
   const container = document.querySelector('.container');
   const guessSubmit = document.querySelector('.guessSubmit');
   const guessField = document.querySelector('#guessField');
-
+  guessField.focus();
   let guessCount = 1;
   let resetButton;
 
@@ -67,7 +67,7 @@ if (Number(age) < 18) {
     resetButton.remove();
     guessField.value = '';
     guessField.focus();
-    lastResult.style.backgroundColor = 'white';
+    lastResult.style.backgroundColor = ' rgb(64, 132, 109)';
     randomNumber = Math.floor(Math.random() * 100) + 1;
   }
   guessSubmit.addEventListener('click', checkGuess);
